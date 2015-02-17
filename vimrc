@@ -10,6 +10,7 @@ Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'fabi1cazenave/suckless.vim'
 
 call vundle#end()
 filetype plugin indent on    
@@ -20,11 +21,9 @@ set t_Co=256
 let g:airline_powerline_fonts = 1
 let g:Powerline_symbols = 'fancy'
 
-" Moving between splits
-map <C-J> <C-W>j<C-W>_
-map <C-K> <C-W>k<C-W>_
-map <C-L> <C-W>l
-map <C-H> <C-W>h
+" Latex Box stuff
+let g:LatexBox_latexmk_optios="-pdf"
+let g:LatexBox_output_type="pdf"
 
 " Tabbing and indenting
 set showmatch
