@@ -11,6 +11,7 @@ Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fabi1cazenave/suckless.vim'
+Plugin 'ervandew/supertab'
 
 call vundle#end()
 filetype plugin indent on    
