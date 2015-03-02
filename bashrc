@@ -15,6 +15,6 @@ export LS_COLORS
 #PS1='[\u@\h \W]\$ '
 PS1='\[\e[0;33m\][\u@\h]\W\$\[\e[0m\] '
 alias emacs='emacs -nw'
-alias ll='ls -lh'
+alias ll='ls -lh --color'
 export LANG=en_US.UTF-8
 set -o vi
