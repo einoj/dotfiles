@@ -54,4 +54,4 @@ function! Iab (ab, full)
     \"')<CR>"
 endfunction
 
-abbr cjam #include <stdio.h><CR>#include <stdlib.h><CR><CR>int main(int argc, char* argv[]) {<CR>int i,j,k;<CR>scanf(%d, i);<CR><CR>return 0;<CR>}
+abbr cjam #include <stdio.h><CR>#include <stdlib.h><CR><CR>int main(int argc, char* argv[]) {<CR>int i,j,k;<CR>scanf("%d", i);<CR><CR>return 0;<CR>}
