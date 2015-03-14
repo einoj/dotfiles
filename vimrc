@@ -47,4 +47,11 @@ ab sop System.out.println();
 ab psvm public static void main(String[] args) {
 map ø :
 imap jj <esc>
+" Create abbreviation suitable for MapNoContext
+function! Iab (ab, full)
+  exe "iab <silent> <buffer> ".a:ab." <C-R>=MapNoContext('".
+    \ a:ab."', '".escape (a:full.'<C-R>=Eatchar()<CR>', '<>\"').
+    \"')<CR>"
+endfunction
 
+abbr cjam #include <stdio.h><CR>#include <stdlib.h><CR><CR>int main(int argc, char* argv[]) {<CR>int i,j,k;<CR>scanf(%d, i);<CR><CR>return 0;<CR>}
