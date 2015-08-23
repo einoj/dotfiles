@@ -37,8 +37,9 @@ set guioptions-=T
 
 " Syntax colors and solaris
 syntax on
-set background=dark
+set background=light
 let g:solarized_termcolors=256
+colorscheme solarized
 
 " Misc
 set mouse=a
