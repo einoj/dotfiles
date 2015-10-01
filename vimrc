@@ -12,6 +12,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fabi1cazenave/suckless.vim'
 Plugin 'ervandew/supertab'
+Plugin 'junegunn/goyo.vim'
+
 
 call vundle#end()
 filetype plugin indent on    
@@ -36,6 +38,10 @@ set shiftwidth=2
 set guioptions-=T
 set guioptions-=m
 set guioptions-=r
+set guioptions-=l
+if has("win32")
+  set guifont=Courier\ New
+endif
 
 " Syntax colors and solaris
 syntax on
