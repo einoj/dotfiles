@@ -35,6 +35,7 @@ set tabstop=2
 set shiftwidth=2
 set guioptions-=T
 set guioptions-=m
+set guioptions-=r
 
 " Syntax colors and solaris
 syntax on
