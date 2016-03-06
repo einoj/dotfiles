@@ -45,9 +45,9 @@ endif
 
 " Syntax colors and solaris
 syntax on
-set background=light
+set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme gruvbox
 
 " Misc
 set mouse=a
