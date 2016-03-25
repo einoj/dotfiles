@@ -13,6 +13,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'fabi1cazenave/suckless.vim'
 Plugin 'ervandew/supertab'
 Plugin 'junegunn/goyo.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 
 call vundle#end()
@@ -63,4 +64,4 @@ function! Iab (ab, full)
     \"')<CR>"
 endfunction
 
-abbr cjam #include <stdio.h><CR>#include <stdlib.h><CR><CR>int main(int argc, char* argv[]) {<CR>int i,j,k;<CR>scanf("%d", i);<CR><CR>return 0;<CR>}
+abbr cjam #include <stdio.h><CR>#include <stdlib.h><CR><CR>int main(int argc, char* argv[]) {<CR>int i,j,k;<CR>scanf("%d", &i);<CR><CR>return 0;<CR>}
