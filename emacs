@@ -1,0 +1,6 @@
+(global-linum-mode 1)
+(show-paren-mode 1)
+(require 'org)
+(require 'ox-latex)
+(require 'ido)
+(ido-mode t)

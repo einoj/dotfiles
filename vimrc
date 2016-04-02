@@ -5,13 +5,16 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'LaTeX-Box-Team/LaTeX-Box'
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fabi1cazenave/suckless.vim'
 Plugin 'ervandew/supertab'
+Plugin 'junegunn/goyo.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+
 
 call vundle#end()
 filetype plugin indent on    
@@ -34,11 +37,18 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set guioptions-=T
+set guioptions-=m
+set guioptions-=r
+set guioptions-=l
+if has("win32")
+  set guifont=Courier\ New
+endif
 
 " Syntax colors and solaris
 syntax on
 set background=dark
 let g:solarized_termcolors=256
+colorscheme gruvbox
 
 " Misc
 set mouse=a
@@ -54,4 +64,4 @@ function! Iab (ab, full)
     \"')<CR>"
 endfunction
 
-abbr cjam #include <stdio.h><CR>#include <stdlib.h><CR><CR>int main(int argc, char* argv[]) {<CR>int i,j,k;<CR>scanf("%d", i);<CR><CR>return 0;<CR>}
+abbr cjam #include <stdio.h><CR>#include <stdlib.h><CR><CR>int main(int argc, char* argv[]) {<CR>int i,j,k;<CR>scanf("%d", &i);<CR><CR>return 0;<CR>}
