@@ -1,0 +1,23 @@
+alias ls="ls --color"
+alias ll="ls -lh --color"
+alias gvim="C:\Program\ Files\ \(x86\)/Vim/vim74/gvim.exe"
+SSH_ENV=~/.ssh/envir
+
+function run_ssh_agent {
+  echo "Starting ssh-agent..."
+  ssh-agent | head -n 2 > "$SSH_ENV"
+  chmod 600 $SSH_ENV
+  echo "Success"
+  . "$SSH_ENV"
+  ssh-add
+}
+
+# check if ssh-agent is running
+ps aux | grep ssh-agent > /dev/null
+if [ $? -eq 0 ]; then
+  echo agent-running
+  . "$SSH_ENV"
+  ssh-add -l
+else
+  run_ssh_agent
+fi
