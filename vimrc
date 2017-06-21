@@ -14,6 +14,8 @@ Plugin 'fabi1cazenave/suckless.vim'
 Plugin 'ervandew/supertab'
 Plugin 'junegunn/goyo.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'reedes/vim-pencil'
+Plugin 'tpope/vim-fugitive'
 
 
 call vundle#end()
@@ -28,14 +30,17 @@ let g:Powerline_symbols = 'fancy'
 " Latex Box stuff
 let g:LatexBox_latexmk_optios="-pdf"
 let g:LatexBox_output_type="pdf"
+" Auto compile latex document
+let g:LatexBox_latexmk_preview_continuously="1"
+let g:LatexBox_quickfix="2"
 
 " Tabbing and indenting
 set showmatch
 set smartindent
 set number
 set expandtab
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set guioptions-=T
 set guioptions-=m
 set guioptions-=r
@@ -51,7 +56,7 @@ let g:solarized_termcolors=256
 colorscheme gruvbox
 
 " Misc
-set mouse=a
+set mouse=
 set encoding=utf-8
 ab sop System.out.println();
 ab psvm public static void main(String[] args) {
@@ -64,4 +69,7 @@ function! Iab (ab, full)
     \"')<CR>"
 endfunction
 
-abbr cjam #include <stdio.h><CR>#include <stdlib.h><CR><CR>int main(int argc, char* argv[]) {<CR>int i,j,k;<CR>scanf("%d", &i);<CR><CR>return 0;<CR>}
+abbr cjam #include <stdio.h><CR>#include <stdlib.h><CR><CR>int main(int argc, char* argv[]) {<CR>int i,j,k,N;<CR>scanf("%d", &N);<CR><CR>return 0;<CR>}
+
+" C Mappings
+map <F7> !make <CR>
