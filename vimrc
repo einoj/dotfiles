@@ -15,6 +15,7 @@ Plugin 'ervandew/supertab'
 Plugin 'junegunn/goyo.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'reedes/vim-pencil'
+Plugin 'reedes/vim-colors-pencil'
 Plugin 'tpope/vim-fugitive'
 
 
@@ -54,7 +55,7 @@ endif
 syntax on
 set background=dark
 let g:solarized_termcolors=256
-colorscheme gruvbox
+colorscheme pencil
 
 " Misc
 set mouse=
