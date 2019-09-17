@@ -72,6 +72,7 @@ function! Iab (ab, full)
 endfunction
 
 abbr cjam #include <stdio.h><CR>#include <stdlib.h><CR><CR>int main(int argc, char* argv[]) {<CR>int i,j,k,N;<CR>scanf("%d", &N);<CR><CR>return 0;<CR>}
+abbr cppjam #include <iostream><CR>#include <cstdlib><CR><CR>int main(int argc, char* argv[]) {<CR>unsigned int n = atoi(argv[1]);<CR><CR>cout << countways(n) << endl;<CR><CR>return 0;<CR>}
 
 " C Mappings
 map <F7> !make <CR>
