@@ -11,12 +11,12 @@ Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'fabi1cazenave/suckless.vim'
-Plugin 'ervandew/supertab'
 Plugin 'junegunn/goyo.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'reedes/vim-pencil'
 Plugin 'reedes/vim-colors-pencil'
 Plugin 'tpope/vim-fugitive'
+Plugin 'ycm-core/YouCompleteMe'
 
 
 call vundle#end()
@@ -53,7 +53,7 @@ endif
 
 " Syntax colors and solaris
 syntax on
-set background=dark
+set background=light
 let g:solarized_termcolors=256
 colorscheme pencil
 

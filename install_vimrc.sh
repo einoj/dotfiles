@@ -12,4 +12,12 @@ echo Installing plugins using vundle...
 # -E to ignore the E185 colorscheme not installed error
 echo Expecting E185
 vim -E -c "PluginInstall" -c ":q" -c ":q"
+if hash cmake 2>/dev/null; then
+    echo "cmake is installed"
+else
+    sudo apt update
+    sudo apt install build-essential cmake python3-dev
+fi
+    cd ~/.vim/bundle/YouCompleteMe
+    python3 install.py
 echo Done!
