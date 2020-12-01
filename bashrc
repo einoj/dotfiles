@@ -15,10 +15,11 @@ function parse_git_branch () {
 
        RED="\[\033[0;31m\]"
        YELLOW="\[\033[0;33m\]"
-       GREEN="\[\033[0;32m\]"
+       GREENBOLD="\[\033[01;32m\]"
+       BLUEBOLD="\[\033[01;34m\]"
        NO_COLOUR="\[\033[0m\]"
 
-PS1="$GREEN\u@\h$NO_COLOUR: \w$YELLOW\$(parse_git_branch)$NO_COLOUR-> "
+PS1="$GREENBOLD\u@\h$NO_COLOUR:$BLUEBOLD\w$YELLOW\$(parse_git_branch)$NO_COLOUR-> "
 #PS1="\u@\h \w/ -> "
 export LANG=en_US.UTF-8
 alias quartus="/opt/altera/14.0/quartus/bin/quartus --64bit"
