@@ -38,3 +38,5 @@ alias mkdate="date +"%F" | xargs mkdir"
 
 # virtual python
 source ~/.python/bin/activate
+# git completion
+source /usr/share/bash-completion/completions/git
