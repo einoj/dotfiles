@@ -40,6 +40,10 @@ let g:LatexBox_quickfix="2"
 set showmatch
 set smartindent
 set number
+set ignorecase
+set hlsearch
+set incsearch
+set noswapfile
 set expandtab
 set tabstop=4
 set shiftwidth=4
