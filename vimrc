@@ -51,6 +51,8 @@ set guioptions-=T
 set guioptions-=m
 set guioptions-=r
 set guioptions-=l
+set wildmode=longest,list,full
+set wildmenu
 if has("win32")
   set guifont=Courier\ New
 endif
