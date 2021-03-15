@@ -62,7 +62,7 @@ let g:solarized_termcolors=256
 colorscheme pencil
 
 " Misc
-set mouse=
+set mouse=a
 set encoding=utf-8
 ab sop System.out.println();
 ab psvm public static void main(String[] args) {
