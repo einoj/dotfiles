@@ -47,6 +47,8 @@ set noswapfile
 set expandtab
 set tabstop=4
 set shiftwidth=4
+set wildmode=longest,list,full
+set wildmenu
 set guioptions-=T
 set guioptions-=m
 set guioptions-=r

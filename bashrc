@@ -33,10 +33,8 @@ alias ll="ls -lh"
 alias emacs="emacs -nw"
 alias matlab="/home/einojo/matlab/bin/matlab"
 
-set -o vi
+export EDITOR=vim
 alias mkdate="date +"%F" | xargs mkdir"
 
-# virtual python
-source ~/.python/bin/activate
 # git completion
 source /usr/share/bash-completion/completions/git
