@@ -134,7 +134,7 @@
 (add-hook 'org-present-mode-quit-hook 'my/org-present-end)
 
 ;; NOTE: These settings might not be ideal for your machine, tweak them as needed!
-(set-face-attribute 'default nil :font "JetBrains Mono" :weight 'light :height 180)
+(set-face-attribute 'default nil :font "JetBrains Mono" :weight 'light :height 140)
 (set-face-attribute 'fixed-pitch nil :font "JetBrains Mono" :weight 'light :height 190)
 (set-face-attribute 'variable-pitch nil :font "Iosevka Aile" :weight 'light :height 1.3)
 ;; Load org-faces to make sure we can set appropriate faces
