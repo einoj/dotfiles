@@ -15,6 +15,11 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- My plugins here
   use 'fabi1cazenave/suckless.vim'
+  use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+}
+  use 'https://github.com/tpope/vim-fugitive'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
