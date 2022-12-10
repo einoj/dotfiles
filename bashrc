@@ -32,8 +32,9 @@ alias :q="exit"
 alias ll="ls -lh"
 alias emacs="emacs -nw"
 alias matlab="/home/einojo/matlab/bin/matlab"
+alias vim="nvim"
 
-export EDITOR=vim
+export EDITOR=nvim
 alias mkdate="date +"%F" | xargs mkdir"
 
 # git completion
