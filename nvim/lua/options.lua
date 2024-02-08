@@ -10,3 +10,12 @@ vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 -- completion options
 vim.opt.wildmode = "longest,list,full"
+-- Set colorscheme
+vim.o.termguicolors = true
+vim.o.background = "light"
+local colorscheme = "solarized"
+local ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+if not ok then
+  vim.notify("colorscheme " .. colorscheme .. " not found!")
+  return
+end
