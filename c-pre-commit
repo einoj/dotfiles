@@ -1,0 +1,17 @@
+#!/bin/bash
+change=""
+for FILE in $(git diff --staged HEAD --name-only)
+do
+  change=$(git diff -U0 --no-color --staged HEAD ${FILE} | clang-format-diff -style webkit -p1)
+done
+
+if [[ ${change} ]];
+then
+    echo "Aborting commit due to formatting"
+    git-clang-format --style=webkit
+    echo "Formatted files according to webkit-style, please review before staging"
+    exit 1
+else
+    echo "All Clean"
+    exit 0
+fi
