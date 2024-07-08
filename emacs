@@ -4,8 +4,6 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
-(global-linum-mode t)
 (require 'org)
 (require 'ox-latex)
 (require 'ido)
@@ -31,7 +29,7 @@
     ("https://xkcd.com/rss.xml" "http://ratfactor.com/atom.xml")))
  '(package-selected-packages
    (quote
-    (modus-themes visual-fill-column org-present color-theme-sanityinc-solarized magit elfeed-org elfeed elpy evil gnu-apl-mode ##))))
+    (modus-themes visual-fill-column org-present color-theme-sanityinc-solarized magit elfeed-org elfeed evil gnu-apl-mode ##))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -42,21 +40,6 @@
 ;; vi mode :)
 (require 'evil)
 (evil-mode 1)
-
-(defvar pythonIDE
-  '(elpy ;; Emacs Lisp Python Environment
-    )
-  )
-(setq elpy-rpc-python-command "python3")
-
-;; Scans the list in pythonIDE
-;; If the package listed is not already installed, install it
-
-(mapc #'(lambda (package)
-    (unless (package-installed-p package)
-    (package-install package)))
-    pythonIDE)
-
 
 ;; elfeed rss reader
 (add-to-list 'evil-emacs-state-modes 'elfeed-search-mode)
@@ -143,6 +126,7 @@
 ;; Hide emphasis markers on formatted text
 (setq org-hide-emphasis-markers t)
 
+
 ;; Resize Org headings
 (dolist (face '((org-level-1 . 1.2)
                 (org-level-2 . 1.1)
@@ -166,3 +150,7 @@
 (set-face-attribute 'org-special-keyword nil :inherit '(font-lock-comment-face fixed-pitch))
 (set-face-attribute 'org-meta-line nil :inherit '(font-lock-comment-face fixed-pitch))
 (set-face-attribute 'org-checkbox nil :inherit 'fixed-pitch)
+
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(load "book-mode.el")
+(setq org-src-fontify-natively t)
