@@ -154,3 +154,38 @@
 (add-to-list 'load-path "~/.emacs.d/lisp")
 (load "book-mode.el")
 (setq org-src-fontify-natively t)
+
+
+;; Orgmode colored tables functions
+;; this function is not working yet
+(defun  org-set-color (x color)
+    (let ((overlay (make-overlay (org-element-property :contents-begin x)
+				(org-element-property :contents-end x))))
+	(overlay-put overlay 'face '(background-color . color)))
+)
+
+;; Orgmode actually set colors of table cells
+(defun org-element-example ()
+    (interactive)
+    (let* ((tree (org-element-parse-buffer))
+           (tables (org-element-map tree 'table 'identity)))
+      (org-element-map (car tables) 'table-cell
+         (lambda (x)
+           (when (string= (car (org-element-contents x)) "Base")
+               (let ((overlay (make-overlay (org-element-property :contents-begin x)
+                                            (org-element-property :contents-end x))))
+                 (overlay-put overlay 'face '(background-color . "orange"))))
+           (when (string= (car (org-element-contents x)) "Tapering")
+               (let ((overlay (make-overlay (org-element-property :contents-begin x)
+                                            (org-element-property :contents-end x))))
+                 (overlay-put overlay 'face '(background-color . "green"))))
+           (when (string= (car (org-element-contents x)) "Specific")
+               (let ((overlay (make-overlay (org-element-property :contents-begin x)
+                                            (org-element-property :contents-end x))))
+                 (overlay-put overlay 'face '(background-color . "yellow"))))
+           (when (string= (car (org-element-contents x)) "K:")
+               (let ((overlay (make-overlay (org-element-property :contents-begin x)
+                                            (org-element-property :contents-end x))))
+                 (overlay-put overlay 'face '(background-color . "red"))))
+	    )
+)))
