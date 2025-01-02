@@ -24,6 +24,10 @@ return require('packer').startup(function(use)
       'nvim-telescope/telescope.nvim', tag = '0.1.5',
       requires = { {'nvim-lua/plenary.nvim'} }
   }
+  use {
+
+      'https://github.com/neovim/nvim-lspconfig.git', tag = 'v0.1.8',
+  }
 
   use 'https://github.com/frankier/neovim-colors-solarized-truecolor-only.git'
   -- Automatically set up your configuration after cloning packer.nvim
