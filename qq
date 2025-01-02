@@ -1,0 +1,20 @@
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+
+    // US keyboard layout but with æ,ø,å accessible with alt+gr and s,d,f
+	// install into /usr/share/X11/xkb/symbols/qq and select with setxkbmap qq
+
+    include "us(basic)"
+
+    name[Group1]="Norwegian";
+
+    key <AD04>	{ [         r,          R,   registered,    trademark ]	};
+    key <AD10>	{ [         p,          P,     Greek_pi,     Greek_PI ]	};
+    key <AE05>	{ [         5,    percent,      onehalf,    0x1002030 ]	};
+
+    key <AC02> {	[	  s,	S,		ae,			AE ]	};
+    key <AC03> {	[	  d,	D,		oslash,		Ooblique ]	};
+    key <AC04> {	[	  f,	F,		aring,		Aring ]	};
+
+    include "level3(ralt_switch)"
+};
