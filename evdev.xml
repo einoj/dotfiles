@@ -1,0 +1,14 @@
+<!-- Add this after the <layoutList> tag in -->
+<!-- /usr/share/X11/xkb/rules/evdev.xml -->
+<!-- To be able to find it in gnome-control-center -->
+    <layout>
+      <configItem>
+        <name>qq</name>
+        <shortDescription>qq</shortDescription>
+        <description>Nordic (Based on US English)</description>
+        <languageList>
+		<iso639Id>nob</iso639Id>
+	</languageList>
+      </configItem>
+      <variantList/>
+    </layout>
