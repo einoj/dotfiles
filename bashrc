@@ -39,3 +39,4 @@ alias mkdate="date +"%F" | xargs mkdir"
 
 # git completion
 source /usr/share/bash-completion/completions/git
+setxkbmap -option -layout qq
