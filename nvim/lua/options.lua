@@ -13,6 +13,9 @@ vim.opt.wildmode = "longest,list,full"
 -- Set colorscheme
 vim.o.termguicolors = true
 vim.o.background = "light"
+-- Set dummy variable to avoid error message from nvim 0.11.0
+-- because suckless.vim uses unsupported variable
+vim.g.suckless_guitablabel= "unused variable"
 local colorscheme = "solarized"
 local ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
 if not ok then
