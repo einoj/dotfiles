@@ -15,6 +15,8 @@ xkb_symbols "basic" {
     key <AC02> {	[	  s,	S,		ae,			AE ]	};
     key <AC03> {	[	  d,	D,		oslash,		Ooblique ]	};
     key <AC04> {	[	  f,	F,		aring,		Aring ]	};
+    key <AD03> {	[	  e,	E,		eacute,		Eacute ]	};
+    key <AD09> {	[	  o,	O,		odiaeresis,	Odiaeresis ]	};
 
     include "ctrl(swapcaps)"
     include "level3(ralt_switch)"
